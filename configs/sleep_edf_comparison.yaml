@@ -1,0 +1,18 @@
+experiment_name: "Comparison_SleepEDFx_ResNet18"
+seed: 42
+device: "cuda"
+
+dataset_name: "sleep-edfx"
+data_dir: "./data/sleep-edfx/"
+split_ratio: 0.8
+batch_size: 1024
+num_workers: 4
+
+resnet_out_dim: 512
+feat_dim: 256
+
+num_actions: 5
+epochs: 10
+
+lr: 0.0001
+temp: 0.1

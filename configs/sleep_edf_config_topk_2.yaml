@@ -1,0 +1,27 @@
+experiment_name: "RL_BioAug_SleepEDFx_ResNet18_TopK_2"
+seed: 42
+device: "cuda"
+
+dataset_name: "sleep-edfx"
+data_dir: "./data/sleep-edfx/"
+split_ratio: 0.8
+batch_size: 1024
+num_workers: 4
+search_data_ratio: 0.1
+
+resnet_out_dim: 512
+feat_dim: 256
+agent_hidden: 128
+agent_seq_len: 10
+agent_num_head: 4
+agent_num_layers: 1
+
+num_actions: 5
+top_k: 2
+
+epochs: 300
+retrain_epochs: 50
+
+lr_enc: 0.0001
+lr_agent: 0.0001
+temp: 0.1
