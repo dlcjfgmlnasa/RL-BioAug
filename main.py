@@ -12,8 +12,8 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Subset
 from torch.utils.tensorboard import SummaryWriter
 
-from main_search import BioRLTrainer
-from main_retrain import SSLRetrainer
+from src.main_search import BioRLTrainer
+from src.main_retrain import SSLRetrainer
 
 from src.data.dataset import get_datasets
 from src.models.resnet import ResNet1D18
@@ -89,7 +89,7 @@ def load_config(config_path: str):
 
 def main():
     parser = argparse.ArgumentParser(description="Integrated Bio-Signal RL Training")
-    parser.add_argument('--config', type=str, default='configs/sleep_edf_config_topk_5.yaml')
+    parser.add_argument('--config', type=str, default='configs/chb_mit_config_topk_1.yaml')
     parser.add_argument('--mode', type=str, default='all', choices=['search', 'retrain', 'all'])
     args = parser.parse_args()
 
@@ -142,7 +142,6 @@ def main():
         search_subset,
         batch_size=config['batch_size'],
         shuffle=True,
-        drop_last=True,
         num_workers=num_workers,
         pin_memory=True
     )
