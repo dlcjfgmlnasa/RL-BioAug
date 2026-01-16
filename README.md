@@ -17,8 +17,10 @@ Contrastive learning has emerged as a promising paradigm in EEG analysis by redu
 ## 🛠️ Framework Architecture
 
 <div align="center">
-  <img src="./assets/framework.png" alt="RL-BioAug Framework" width="90%">
+  <img src="https://github.com/dlcjfgmlnasa/RL-BioAug/blob/main/main_figure.png" alt="RL-BioAug Framework" width="90%">
 </div>
+
+
 
 The training process is modeled as a **Markov Decision Process (MDP)**:
 
@@ -40,3 +42,5 @@ cd RL-BioAug
 
 # 2. Install dependencies
 pip install -r requirements.txt
+
+## Usage
